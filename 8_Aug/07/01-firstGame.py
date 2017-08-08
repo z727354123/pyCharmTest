@@ -1,4 +1,4 @@
-print('----------我的第一个游戏---------')
+print('---------Python第一个测试----------')
 temp = input('不妨猜一下我现在心里想的是哪个英文:')
 guess = temp
 if guess == 'MMP':
