@@ -7,3 +7,4 @@ if guess == 'MMP':
 else:
 	print('猜错了，我心里想的是MMP')
 print('游戏结束，不玩啦！！！')
+input('\n------over--------\n如果是cmd，按回车关闭窗口！')

@@ -8,3 +8,5 @@ print('temp = ' + str(temp))
 print('Temp = ' + Temp)
 print('tEMp = ' + tEMp)
 print('temP = ' + temP)
+
+input('\n------over--------\n如果是cmd，按回车关闭窗口！')
