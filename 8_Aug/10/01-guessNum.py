@@ -1,6 +1,6 @@
 import random
 print('猜猜0~10的数字，你有三次机会')
-randomNum = random.randint(0,10)
+randomNum = random.randint(0, 10)
 for i in range(3):
     num = int(input('请输入您的第' + str(i+1) + '次答案：' ))
     if num == randomNum:

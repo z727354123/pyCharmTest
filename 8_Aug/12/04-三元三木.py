@@ -5,3 +5,6 @@ while True:
     num = int(input('输入0终止程序'))
     if num == 0:
         break
+
+# 再来一次 三元运算符号
+print(trueMsg)
