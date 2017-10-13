@@ -6,6 +6,6 @@ print(tupleA)
 listA.append('hehe')
 print(tupleA)
 print(tupleA[0])
-tupleB[0] = 12
+# tupleB[0] = 12
 print(tupleB)
 
