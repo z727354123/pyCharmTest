@@ -25,4 +25,7 @@
 
 listA = ['1', '2', '3']
 listB = ['a', 'b', 'c']
-print [itemA + itemB for itemA in listA for itemB in listB]
+print([itemA + itemB for itemA in listA for itemB in listB])
+
+objA = {"name": 123, 1 : "1", "1": 1}
+print(objA)

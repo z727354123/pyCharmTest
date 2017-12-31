@@ -58,3 +58,5 @@ print(isinstance(print, type))
 print(isinstance(float, type))
 print(isinstance(int, type)) 
 print(isinstance(str, type))
+
+print(1 / .1)

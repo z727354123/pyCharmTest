@@ -5,6 +5,7 @@ listC = [1]
 listB *= 3
 print(listB)
 print(listB[9] == listA)
+print(listB[4] is listA)
 print(listB[9] is listA)
 print(listB[9] is listC)
 print('-------------------------')

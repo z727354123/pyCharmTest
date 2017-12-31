@@ -9,11 +9,11 @@ listA = [1]
 listC = [1]
 listB = [1, 2, 3, 4, listA]
 
-print('------------')
+print('----list-----')
 print(listA in listB)
 print(listC is listA)
 print(listC == listA)
-print(listC in listB)
+print([1] in listB)
 
 print('------------')
 print('asd' in 'faddddasdf')
