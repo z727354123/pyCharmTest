@@ -1,0 +1,13 @@
+生成的清单为：
+┣━ txt
+┃   ┣━ adf.avi.txt
+┃   ┗━ a.jpg.txt
+┣━ gif
+┃   ┗━ 666.txt.gif
+┣━ png
+┃   ┣━ 123.png
+┃   ┗━ b.png
+┣━ jpg
+┃   ┗━ a.jpg
+┗━ avi
+    ┗━ 456.avi
