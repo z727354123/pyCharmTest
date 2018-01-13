@@ -13,9 +13,6 @@ fileDict = {}
 for val in fileList:
     index = val.rfind(".", )   # rfind = 从右边找
     if index == -1:  # 文件夹跳过
-
-
-
         continue
     dirStr = val[index + 1:] # 文件夹名
     arr = fileDict.setdefault(dirStr, [])  # 获取数组
