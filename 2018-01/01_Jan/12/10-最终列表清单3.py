@@ -4,7 +4,7 @@ import os
 os.chdir("/Users/Fizz_kai/Documents/Python/02-基础")
 file = open("list.txt", "w", encoding="utf=8")
 
-destPath = "/Users/Fizz_kai"    #目标目录
+destPath = "/Users/Fizz_kai/Documents"    #目标目录
 # 1. 改变目标目录
 if not os.path.isdir(destPath):
     exit(0)
