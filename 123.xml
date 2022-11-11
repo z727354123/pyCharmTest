@@ -4,7 +4,6 @@
 	date_format(ds.create_time, '%Y-%m-%d') as create_date,
 	date_format(ds.update_time, '%Y-%m-%d') as update_date,
 	from aad_data_set.data_set ds
-	left join aad_data_set.data_set_label dsl on ds.id = dsl.data_set_id
 	where ds.is_delete = false
 	<if test="params != null and params.dataSetName != null and params.dataSetName != '' ">
 		and ds.data_set_name like concat('%', #{params.dataSetName}, '%')
