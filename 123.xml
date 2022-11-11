@@ -1,0 +1,30 @@
+<select id="queryDataSetList" resultMap="DataSetListVOResultMap">
+	select ds.id, ds.data_set_name, ds.creator, ds.remark,
+	(select count(1) from aad_data_set.data_set_image dsi where dsi.data_set_id = ds.id) as image_size,
+	date_format(ds.create_time, '%Y-%m-%d') as create_date,
+	date_format(ds.update_time, '%Y-%m-%d') as update_date,
+	from aad_data_set.data_set ds
+	left join aad_data_set.data_set_label dsl on ds.id = dsl.data_set_id
+	where ds.is_delete = false
+	<if test="params != null and params.dataSetName != null and params.dataSetName != '' ">
+		and ds.data_set_name like concat('%', #{params.dataSetName}, '%')
+	</if>
+
+	<if test="params != null and params.creator != null and params.creator != '' ">
+		and ds.creator like concat('%', #{params.creator}, '%')
+	</if>
+
+	<if test="params != null and params.isJustMe and userCode != null">
+		and ds.creator_code = #{userCode}
+	</if>
+
+	<if test="params != null and params.labelIds != null and params.labelIds.size() > 0">
+		<foreach collection="params.labelIds" item="value" separator="," open="(" close=")">
+			and ds.id in (
+			select dsl.data_set_id from aad_data_set.data_set_label dsl where dsl.label_id =
+			#{value}
+			)
+		</foreach>
+	</if>
+	order by ${orderType}
+</select>
