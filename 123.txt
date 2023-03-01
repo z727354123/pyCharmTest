@@ -1,0 +1,10 @@
+     operateOption.setVariableValue("importtype", "new");
+        // 导入时使用 map，position number -> new bill id (from cosmic frame)
+        operateOption.setVariableValue("numberVsIdMap", getNumberIdMap(dataEntities));
+        OperationResult result = operationService.localInvokeOperation(HRBaseConstants.DISABLE, dyns, operateOption);
+        List<IOperateInfo> efforInfo = result.getAllErrorOrValidateInfo();
+        // 封装错误
+        for (IOperateInfo iOperateInfo : efforInfo) {
+            String[] split = iOperateInfo.getMessage().split(":");
+            String number = split[0];
+            String message = split[1];
